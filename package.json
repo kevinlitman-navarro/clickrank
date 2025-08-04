@@ -8,7 +8,13 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check --plugin-search-dir=. .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"scrape": "node scripts/clickbait-scraper.js",
+		"scrape-fox": "node scripts/foxnews-scraper.js",
+		"scrape-outbrain": "node scripts/outbrain-scraper.js",
+		"scrape-dailymail": "node scripts/dailymail-scraper.js",
+		"merge": "node scripts/merge-data.js",
+		"dataset": "node scripts/switch-dataset.js"
 	},
 	"devDependencies": {
 		"@lucide/svelte": "^0.525.0",

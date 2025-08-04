@@ -2,7 +2,7 @@
 	import { setContext } from "svelte";
 	import { browser } from "$app/environment";
 	import Meta from "$components/Meta.svelte";
-	import Index from "$components/Index.svelte";
+	import ClickbaitVoter from "$components/ClickbaitVoter.svelte";
 	import copy from "$data/copy.json";
 	import version from "$utils/version.js";
 
@@ -10,17 +10,16 @@
 
 	version();
 
-	const preloadFont = [
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Regular.woff2",
-		"https://pudding.cool/assets/fonts/tiempos/TiemposTextWeb-Bold.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Regular-Web.woff2",
-		"https://pudding.cool/assets/fonts/atlas/AtlasGrotesk-Bold-Web.woff2"
-	];
+	const preloadFont = [];
 
-	const { title, description, url, keywords } = copy;
+	const title = "ClickRank";
+	const description = "Vote on clickbait articles and rank them by popularity";
+	const url = "https://clickrank.example.com";
+	const keywords = "clickbait, voting, ranking, articles";
+	
 	setContext("copy", copy);
 	setContext("data", data);
 </script>
 
 <Meta {title} {description} {url} {preloadFont} {keywords} />
-<Index />
+<ClickbaitVoter articles={data.articles} votes={data.votes} />

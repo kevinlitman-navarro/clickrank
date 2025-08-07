@@ -116,6 +116,10 @@
 		<div class="progress-text">{currentIndex + 1} / {featuredArticles.length}</div>
 	</div>
 	
+	<div class="main-instruction">
+		<h2>Do you want to click on this?</h2>
+	</div>
+	
 	{#if currentArticle}
 		<div class="card-container">
 			<div 
@@ -214,6 +218,18 @@
 		right: 0;
 		font-size: 0.9rem;
 		font-weight: bold;
+	}
+	
+	.main-instruction {
+		text-align: center;
+		margin: 1rem 0;
+	}
+	
+	.main-instruction h2 {
+		font-size: 1.5rem;
+		font-weight: bold;
+		margin: 0;
+		color: #fff;
 	}
 	
 	.card-container {

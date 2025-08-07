@@ -384,16 +384,28 @@
 	
 	@media (max-width: 768px) {
 		.container {
-			padding: 1rem;
+			padding: 0.5rem;
 		}
 		
 		h1 {
-			font-size: 2rem;
+			font-size: 1.8rem;
 			padding: 0.5rem;
+			margin-bottom: 1rem;
 		}
 		
 		.controls {
 			gap: 0.5rem;
+			margin-bottom: 1.5rem;
+		}
+		
+		.filters {
+			flex-direction: column;
+		}
+		
+		.filter {
+			padding: 0.75rem;
+			font-size: 0.8rem;
+			min-width: auto;
 		}
 		
 		.sort-controls {
@@ -409,46 +421,58 @@
 		}
 		
 		.sort-buttons {
-			gap: 0.25rem;
+			flex-direction: column;
+			gap: 0;
 		}
 		
 		.sort-btn {
 			font-size: 0.8rem;
-			padding: 0.5rem;
+			padding: 0.75rem;
 			min-width: auto;
 		}
 		
 		.article {
-			grid-template-columns: 40px 180px 1fr 120px;
-			padding: 0.75rem;
-			gap: 0.5rem;
-		}
-		
-		.thumbnail {
-			width: 180px;
-			height: 135px;
+			display: flex;
+			flex-direction: column;
+			padding: 1rem;
+			gap: 1rem;
+			align-items: stretch;
 		}
 		
 		.rank {
-			font-size: 1.2rem;
+			font-size: 1.5rem;
+			text-align: center;
+			order: 1;
+		}
+		
+		.thumbnail {
+			width: 100%;
+			height: 200px;
+			order: 2;
 		}
 		
 		.title {
-			font-size: 1.1rem;
+			font-size: 1rem;
+			line-height: 1.3;
+			text-align: center;
+			order: 3;
 		}
 		
 		.votes {
-			gap: 0.5rem;
+			gap: 1rem;
+			justify-content: center;
+			order: 4;
 		}
 		
 		.vote {
-			width: 40px;
-			padding: 0.4rem;
-			font-size: 0.8rem;
+			width: 60px;
+			padding: 0.75rem 0.5rem;
+			font-size: 0.9rem;
 		}
 		
 		.score {
-			font-size: 1rem;
+			font-size: 1.2rem;
+			min-width: 50px;
 		}
 	}
 </style>
